@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git, GitHub & GitLab Bootcamp — DPE-01</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #F7F9F8;
+      color: #0F172A;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0F172A;
+      padding: 28px 48px 24px;
+      border-bottom: 3px solid #00A859;
+    }
+
+    header h1 {
+      color: #00A859;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    header p {
+      color: #848688;
+      font-size: 0.82rem;
+      margin-top: 5px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #00A859;
+      color: white;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 36px auto;
+      padding: 0 24px;
+    }
+
+    .intro {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid #00A859;
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 32px;
+      font-size: 0.875rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #848688;
+      margin-bottom: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      position: relative;
+    }
+
+    .card:hover {
+      border-color: #00A859;
+      box-shadow: 0 2px 12px rgba(0,168,89,0.12);
+    }
+
+    .card-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #00A859;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .card-topics {
+      font-size: 0.72rem;
+      color: #848688;
+      line-height: 1.6;
+    }
+
+    .card-topics span {
+      display: inline-block;
+      background: #F0FAF4;
+      border: 1px solid #C3E4D0;
+      color: #00703A;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin: 2px 2px 0 0;
+      font-size: 0.67rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #848688;
+      font-size: 0.75rem;
+      border-top: 1px solid #E2E8F0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Git, GitHub &amp; GitLab Bootcamp <span class="badge">DPE-01</span></h1>
+  <p>Data Platform &amp; Engineering Bootcamp · 9 Sessiya · Azərbaycan dilində</p>
+</header>
+
+<main>
+  <div class="intro">
+    Bu modul Git-in əsaslarından başlayaraq GitHub/GitLab platformalarına, real iş workflow-larına və müsahibə hazırlığına qədər hər şeyi əhatə edir.
+    Hər sessiya nəzəriyyə + vizual izah + praktik tapşırıq + quiz formatındadır.
+  </div>
+
+  <p class="section-title">Sessiyanı seçin</p>
+
+  <div class="grid">
+
+    <a class="card" href="session-01-konseptual.html">
+      <div class="card-num">Sessiya 01</div>
+      <div class="card-title">Konseptual Əsaslar</div>
+      <div class="card-topics">
+        <span>VCS nədir</span>
+        <span>Git tarixi</span>
+        <span>3-Zone</span>
+        <span>.git qovluğu</span>
+        <span>SHA Hash</span>
+        <span>git init</span>
+        <span>git config</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-02-commit.html">
+      <div class="card-num">Sessiya 02</div>
+      <div class="card-title">İlk Commit</div>
+      <div class="card-topics">
+        <span>git status</span>
+        <span>git add</span>
+        <span>.gitignore</span>
+        <span>git commit</span>
+        <span>Conventional Commits</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-03-tarixce.html">
+      <div class="card-num">Sessiya 03</div>
+      <div class="card-title">Tarixçə &amp; Geri Qaytarma</div>
+      <div class="card-topics">
+        <span>git log</span>
+        <span>git diff</span>
+        <span>git show</span>
+        <span>git restore</span>
+        <span>git reset</span>
+        <span>git mv</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-04-branch.html">
+      <div class="card-num">Sessiya 04</div>
+      <div class="card-title">Branch &amp; HEAD</div>
+      <div class="card-topics">
+        <span>git branch</span>
+        <span>HEAD</span>
+        <span>Detached HEAD</span>
+        <span>git switch</span>
+        <span>git stash</span>
+        <span>git tag</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-05-merge.html">
+      <div class="card-num">Sessiya 05</div>
+      <div class="card-title">Merge, Rebase, Cherry-Pick</div>
+      <div class="card-topics">
+        <span>Fast-Forward</span>
+        <span>Three-Way</span>
+        <span>Conflict</span>
+        <span>git rebase</span>
+        <span>cherry-pick</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-06-remote.html">
+      <div class="card-num">Sessiya 06</div>
+      <div class="card-title">Remote Əməkdaşlıq</div>
+      <div class="card-topics">
+        <span>remote/origin</span>
+        <span>git clone</span>
+        <span>git fetch</span>
+        <span>git pull</span>
+        <span>git push</span>
+        <span>Fork</span>
+        <span>SSH</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-07-github-gitlab.html">
+      <div class="card-num">Sessiya 07</div>
+      <div class="card-title">GitHub, GitLab, PR/MR</div>
+      <div class="card-topics">
+        <span>Pull Request</span>
+        <span>Merge Request</span>
+        <span>GitHub vs GitLab</span>
+        <span>CI/CD giriş</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-08-workflow.html">
+      <div class="card-num">Sessiya 08</div>
+      <div class="card-title">Workflow Strategiyaları</div>
+      <div class="card-topics">
+        <span>Git Flow</span>
+        <span>GitHub Flow</span>
+        <span>Trunk-Based</span>
+        <span>Best Practices</span>
+      </div>
+    </a>
+
+    <a class="card" href="session-09-praktiki.html">
+      <div class="card-num">Sessiya 09</div>
+      <div class="card-title">Tam Praktiki Layihə</div>
+      <div class="card-topics">
+        <span>10 addım</span>
+        <span>student-project</span>
+        <span>Müsahibə hazırlığı</span>
+        <span>Final</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  Data Platform &amp; Engineering Bootcamp · DPE-01 · Git/GitHub/GitLab Modulu
+</footer>
+
+</body>
+</html>
