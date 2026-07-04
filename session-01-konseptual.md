@@ -328,7 +328,6 @@ git hash-object README.md  # → SHA hash görürsünüz
 
 <div class="warn">⚠️ Git-i GitHub ilə eyniləşdirmək — Git = alət (lokal), GitHub = platforma (bulud). Git GitHub olmadan tam işləyir.</div>
 
-**Müəllim qeydi:**
 > "Git hər şeyi `.git/` qovluğunda saxlayır. Bu qovluq olmadan — Git yoxdur. Amma əsl fayllarınız (`Working Directory`) həmişə sizin kompüterinizdədir — git init etməsəniz də, sadəcə tarixçə olmur."
 
 ---

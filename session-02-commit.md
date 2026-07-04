@@ -123,7 +123,7 @@ A  main.py     # A = added (staged)
   Lentdəkiləri geri çıxarmaq istəyirsən?
   → git restore --staged <fayl>    (commit olmamışdan qabaq)
 
-  Kassa vurduqdan sonra pişman oldun?
+  Kassa vurduqdan sonra peşman oldun?
   → git reset --soft HEAD~1        (commit yox olur, fayllar qalır)
 ```
 
