@@ -31,6 +31,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -176,6 +178,8 @@ Bu gün  Dünyanın 95%+ developer-i Git istifadə edir
 <!-- Slide 6: .git qovluğu -->
 ## `.git` Qovluğunun İçi
 
+<div class="bonus">🎁 BONUS mövzu — Git-in daxili işləmə məntiqidir, gündəlik istifadə üçün əzbərləməyə ehtiyac yoxdur</div>
+
 ```bash
 $ git init
 $ tree .git/
@@ -204,6 +208,8 @@ ref: refs/heads/main  # main branch-ındayam
 <!-- Slide 7: 4 Git Obyekti -->
 ## 4 Git Obyekti — Hər Şey Bu 4 Növdür
 
+<div class="bonus">🎁 BONUS mövzu — Git-in daxili modelidir, maraqlananlar üçün</div>
+
 ```
 ┌─────────────┐  ┌──────────────────┐  ┌─────────────────┐  ┌──────────────┐
 │    BLOB      │  │      TREE        │  │     COMMIT       │  │     TAG      │
@@ -228,6 +234,8 @@ ref: refs/heads/main  # main branch-ındayam
 
 <!-- Slide 8: SHA Hash -->
 ## SHA Hash — Git-in Barmaq İzi Sistemi
+
+<div class="bonus">🎁 BONUS mövzu — praktik olaraq bilməli olduğunuz tək şey: hər commit-in `git log --oneline`-da görünən qısa ID-si (hash) var</div>
 
 ```bash
 # Hər Git obyekti özünəməxsus SHA-1 hash-a malikdir:
@@ -308,12 +316,11 @@ git config --global user.email "email@example.com"
 # 4. İlk fayl yarat (Git hələ bilmir)
 echo "# Student Project" > README.md
 git status                # → Untracked files: README.md
-
-# 5. Hash-ı manual hesabla
-git hash-object README.md  # → SHA hash görürsünüz
 ```
 
 <div class="r">Nəticə: .git/ mövcuddur, konfiqurasiyanız var, README.md "untracked"dir — növbəti sessiyada add + commit öyrənəcəksiniz.</div>
+
+<div class="tb">🎁 BONUS (könüllü) — `git hash-object README.md` işlədib faylın SHA hash-ını manual hesablayın.</div>
 
 ---
 
@@ -341,10 +348,10 @@ git hash-object README.md  # → SHA hash görürsünüz
 <div class="q">2. 3-Zone Arxitekturanı izah edin.</div>
 <div class="a">Working Dir: real fayllar (dəyişirsiniz). Staging: növbəti commit üçün seçilmişlər. Repository: daimi tarixçə (.git/).</div>
 
-<div class="q">3. Blob obyekti nəyi saxlayır — fayl adını, yoxsa məzmunu?</div>
+<div class="q">3. (BONUS) Blob obyekti nəyi saxlayır — fayl adını, yoxsa məzmunu?</div>
 <div class="a">Yalnız MƏZMUNU. Fayl adı Tree obyektində saxlanılır. Eyni məzmun = eyni blob (dedup).</div>
 
-<div class="q">4. SHA hash niyə data bütövlüyünü təmin edir?</div>
+<div class="q">4. (BONUS) SHA hash niyə data bütövlüyünü təmin edir?</div>
 <div class="a">Bir bit dəyişsə hash tamamilə dəyişir — dəyişiklik gizlənə bilməz, Git avtomatik aşkarlayır.</div>
 
 <div class="q">5. `git config --global` vs `--local` fərqi nədir?</div>
