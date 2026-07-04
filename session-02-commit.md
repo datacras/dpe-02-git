@@ -31,6 +31,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -147,6 +149,8 @@ git add -p main.py           # ← interactive: hunk-hunk seçim
 git add -A                   # ← həm dəyişiklik, həm silinmə, həm yeni
                              # (köhnə Git-də add . silinmələri əhatə etmirdi)
 ```
+
+<div class="bonus">🎁 BONUS: `git add -p` — gündəlik işdə `git add .` kifayətdir, bunu marağınız olanda öyrənin</div>
 
 **`git add -p` niyə vacibdir?**
 ```
@@ -351,15 +355,13 @@ git log --oneline                     # 1 commit görürsünüz
 
 <div class="t">T.3 — git commit -m "feat: ilk fayllar" ilə commit et. Sonra README.md-ə bir sətir əlavə edib git commit --amend -m "feat: README və main.py əlavə edildi" et.</div>
 
-<div class="t">T.4 — main.py-ə 2 fərqli funksiya əlavə et. git add -p ilə yalnız BİRİNİ stage et, commit et. Sonra ikincisini ayrıca commit et.</div>
-
 ```bash
 # Nəticəni yoxlamaq üçün:
-git log --oneline          # 3 commit görünməlidir (T.2+T.3, T.4a, T.4b)
+git log --oneline          # 2 commit görünməlidir (T.2 → T.3-də amend olundu)
 git status                 # working tree clean olmalıdır
 ```
 
-<div class="warn">⚠️ T.4 ən vacib tapşırıqdır — git add -p real iş həyatında çox istifadə olunur.</div>
+<div class="tb">🎁 BONUS T.4 (könüllü) — main.py-ə 2 fərqli funksiya əlavə et. git add -p ilə yalnız BİRİNİ stage et, commit et. Sonra ikincisini ayrıca commit et.</div>
 
 ---
 

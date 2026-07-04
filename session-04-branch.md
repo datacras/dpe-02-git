@@ -31,6 +31,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -170,6 +172,8 @@ a3f5e9c (HEAD -> main) feat: son commit
 <!-- Slide 5: Detached HEAD -->
 ## Detached HEAD — "Yolu Olmayan Nöqtə"
 
+<div class="bonus">🎁 BONUS mövzu — nadir hallarda rast gəlinir, indi əzbərləməyə ehtiyac yoxdur</div>
+
 ```bash
 # Normal: HEAD → main → C3
 # git checkout <commit-hash> etdikdə:
@@ -300,11 +304,11 @@ git push origin --tags         # bütün tag-ları göndər
 
 <div class="t">T.3 — main.py-ə dəyişiklik et (commit etmə). `git stash` ilə saxla. `git switch feature/greet-update`-ə keç. Geri qayıt, `git stash pop` et.</div>
 
-<div class="t">T.4 — Köhnə bir commit hash-ını tap (`git log --oneline`). `git checkout <hash>` ilə Detached HEAD-ə keç. Xəbərdarlığı oxu. `git switch main` ilə təhlükəsiz geri qayıt.</div>
-
-<div class="t">T.5 — `git tag -a v0.1.0 -m "İlk demo versiya"` ilə tag yarat. `git show v0.1.0` ilə detallarına bax.</div>
+<div class="t">T.4 — `git tag -a v0.1.0 -m "İlk demo versiya"` ilə tag yarat. `git show v0.1.0` ilə detallarına bax.</div>
 
 <div class="r">Nəticə: Branch yaratmaq, HEAD anlayışı, stash iş axını, tag — hamısı bir dəfə praktik edildi.</div>
+
+<div class="tb">🎁 BONUS T.5 (könüllü) — Köhnə bir commit hash-ını tap (`git log --oneline`). `git checkout <hash>` ilə Detached HEAD-ə keç. Xəbərdarlığı oxu. `git switch main` ilə təhlükəsiz geri qayıt.</div>
 
 ---
 
@@ -332,7 +336,7 @@ git push origin --tags         # bütün tag-ları göndər
 <div class="q">2. HEAD nəyə işarə edir?</div>
 <div class="a">Adətən cari branch-a işarə edir (branch isə son commit-ə). Birbaşa commit-ə işarə edirsə — Detached HEAD.</div>
 
-<div class="q">3. Detached HEAD-də commit etdim, necə "xilas" edim?</div>
+<div class="q">3. (BONUS) Detached HEAD-də commit etdim, necə "xilas" edim?</div>
 <div class="a">`git branch yeni-branch-adi` — bu commit-i yeni branch-a "bağlar", sonra main-ə keçib merge edə bilərsiniz.</div>
 
 <div class="q">4. `git switch` vs `git checkout` — niyə switch tövsiyə olunur?</div>

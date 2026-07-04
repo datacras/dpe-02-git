@@ -31,6 +31,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -268,6 +270,8 @@ git commit -m "merge: versiya konflikti həll edildi, 2027 seçildi"
 <!-- Slide 7: Rebase -->
 ## `git rebase` — Tarixçəni "Düzləşdirmək"
 
+<div class="bonus">🎁 BONUS mövzu — real işdə rast gəldikcə öyrənəcəksiniz, indi əzbərləməyə ehtiyac yoxdur</div>
+
 ```bash
 # Rebase-dən ƏVVƏL:
 main:    ●──●──●(C3)
@@ -298,6 +302,8 @@ git log --oneline --graph --all   # tarixçənin "düz xətt" olduğunu görün
 
 <!-- Slide 8: Cherry-Pick -->
 ## `git cherry-pick` — Konkret Commit Köçürmək
+
+<div class="bonus">🎁 BONUS mövzu — real işdə rast gəldikcə öyrənəcəksiniz, indi əzbərləməyə ehtiyac yoxdur</div>
 
 ```bash
 # SSENARI: feature-A branch-ında bir bug-fix var (C7),
@@ -336,11 +342,11 @@ git cherry-pick --continue     # konflikt həll olduqdan sonra davam et
 
 <div class="t">T.3 — Conflict: 2 branch-da EYNİ faylın EYNİ sətirini fərqli dəyişdir. Merge et. Konflikt faylını əl ilə oxu, qərar ver, həll et, commit et.</div>
 
-<div class="t">T.4 — Rebase: feature branch-ında 2 commit et. main-i dəyişdir. `git rebase main` ilə feature-i main-in üzərinə "köçür". `git log --graph` ilə fərqi gör.</div>
-
-<div class="t">T.5 — Cherry-pick: feature branch-ında 3 commit et. Yalnız ortadakı commit-i main-ə cherry-pick et.</div>
-
 <div class="r">Ən vacib tapşırıq: T.3 (conflict) — real komanda işindəki GÜNDƏLİK vəziyyətdir.</div>
+
+<div class="tb">🎁 BONUS T.4 (könüllü) — Rebase: feature branch-ında 2 commit et. main-i dəyişdir. `git rebase main` ilə feature-i main-in üzərinə "köçür". `git log --graph` ilə fərqi gör.</div>
+
+<div class="tb">🎁 BONUS T.5 (könüllü) — Cherry-pick: feature branch-ında 3 commit et. Yalnız ortadakı commit-i main-ə cherry-pick et.</div>
 
 ---
 
@@ -369,10 +375,10 @@ git cherry-pick --continue     # konflikt həll olduqdan sonra davam et
 <div class="q">3. Merge Conflict-i həll etmənin 5 addımını sayın.</div>
 <div class="a">1) git status (konfliktli faylları gör) 2) Faylı aç, <<<<<<</=======>>>>>>>> tap 3) Qərar ver, işarələri sil 4) git add 5) git commit.</div>
 
-<div class="q">4. Rebase merge-dən nə ilə fərqlənir?</div>
+<div class="q">4. (BONUS) Rebase merge-dən nə ilə fərqlənir?</div>
 <div class="a">Merge iki tarixçəni BİRLƏŞDİRİR (yeni qovşaq commit). Rebase commit-ləri YENİDƏN YAZIR (yeni hash, düz xətt tarixçə).</div>
 
-<div class="q">5. Cherry-pick nə vaxt faydalıdır?</div>
+<div class="q">5. (BONUS) Cherry-pick nə vaxt faydalıdır?</div>
 <div class="a">Bütün branch-ı deyil, konkret BİR commit-i başqa branch-a köçürmək lazım olduqda. Məs: production-da tək bug-fix, amma develop-da yarımçıq işlər var.</div>
 
 > **Data Platform & Engineering Bootcamp · DPE-01** · Git/GitHub/GitLab Modulu

@@ -30,6 +30,7 @@ style: |
   .r { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 5px 0; font-size: 0.76em; color: #0F172A; }
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .step { background: #0F172A; color: #A7F3D0; padding: 3px 10px; border-radius: 4px; font-size: 0.75em; font-weight: 700; display: inline-block; margin-right: 6px; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -77,6 +78,8 @@ student-project/
 | 8 | Fetch + diff + pull iş axını |
 | 9 | Stash iş axını |
 | 10 | Annotated tag yarat, v1.0.0 relizi |
+
+<div class="bonus">🎁 Qeyd: bu layihə qəsdən yalnız ƏSAS mövzulardan istifadə edir — rebase, cherry-pick, Detached HEAD, Git Flow bura daxil edilməyib. Onları iş həyatında lazım olanda öyrənəcəksiniz.</div>
 
 ---
 

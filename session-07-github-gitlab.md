@@ -35,6 +35,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -255,6 +257,8 @@ git push github main && git push gitlab main
 <!-- Slide 8: GitLab CI/CD Giriş -->
 ## GitLab CI/CD — `.gitlab-ci.yml` Giriş
 
+<div class="bonus">🎁 BONUS mövzu — CI/CD ayrıca modulda ətraflı öyrəniləcək, indi sadəcə adını tanımaq kifayətdir</div>
+
 ```yaml
 # .gitlab-ci.yml — repo kökündə
 stages:
@@ -301,8 +305,6 @@ deploy-job:
 
 <div class="t">T.3 — Eyni layihəni GitLab-a da push edin (ikinci remote olaraq). `git remote add gitlab <gitlab-url>` + `git push gitlab main`.</div>
 
-<div class="t">T.4 — GitLab-da sadə `.gitlab-ci.yml` əlavə edin (yalnız `echo "test keçdi"` olan 1 stage). Push edin, CI pipeline-ın işlədiyini görün.</div>
-
 ```bash
 # Yoxlama:
 git remote -v              # həm github, həm gitlab görünür?
@@ -310,6 +312,8 @@ gh pr list                 # GitHub-da PR-lar
 ```
 
 <div class="r">T.2 ən vacibdir — PR yaratmaq + merge etmək gündəlik DevOps iş axınıdır.</div>
+
+<div class="tb">🎁 BONUS T.4 (könüllü) — GitLab-da sadə `.gitlab-ci.yml` əlavə edin (yalnız `echo "test keçdi"` olan 1 stage). Push edin, CI pipeline-ın işlədiyini görün.</div>
 
 ---
 

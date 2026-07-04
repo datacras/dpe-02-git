@@ -31,6 +31,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -200,6 +202,8 @@ git reset HEAD main.py         # ← köhnə unstage üsulu
 <!-- Slide 6: git reset -->
 ## `git reset` — Tarixçəni Geri Çəkmək
 
+<div class="bonus">🎁 BONUS: 3 rejimin fərqini bilmək faydalıdır, amma başlanğıcda sadəcə `--hard` (tam sil) və `git revert` (təhlükəsiz geri alma) kifayətdir</div>
+
 ```bash
 # ── 3 rejim ────────────────────────────────────────────────────
 
@@ -272,15 +276,15 @@ renamed:    old.py -> new.py   # ← git mv ilə düzgün görünür
 
 <div class="t">T.4 — `git commit --amend` ilə son commit mesajını düzəlt. `git log` ilə hash-ın dəyişdiyini yoxla.</div>
 
-<div class="t">T.5 — `git reset --soft HEAD~1` ilə son commit-i geri çək. `git status` ilə dəyişikliklərin staged qaldığını gör. Sonra yenidən commit et.</div>
-
 ```bash
 # Yoxlama:
 git log --oneline          # commit tarixçənizi görün
 git show HEAD              # son commit-in detalları
 ```
 
-<div class="r">Məqsəd: log/diff/restore/reset-in hər birini bir dəfə müstəqil istifadə etmək.</div>
+<div class="r">Məqsəd: log/diff/restore-un hər birini bir dəfə müstəqil istifadə etmək.</div>
+
+<div class="tb">🎁 BONUS T.5 (könüllü) — `git reset --soft HEAD~1` ilə son commit-i geri çək. `git status` ilə dəyişikliklərin staged qaldığını gör. Sonra yenidən commit et.</div>
 
 ---
 
@@ -337,7 +341,7 @@ geri almaq (təhlükəsiz üsul)        (yeni "geri alma" commit-i yaranır)
 <div class="q">2. `git restore` vs `git reset` fərqi nədir?</div>
 <div class="a">restore: fayl səviyyəsi (working dir / staging). reset: branch (HEAD) səviyyəsi, tarixçəni geri çəkir.</div>
 
-<div class="q">3. `--soft`, `--mixed`, `--hard` fərqlərini izah edin.</div>
+<div class="q">3. (BONUS) `--soft`, `--mixed`, `--hard` fərqlərini izah edin.</div>
 <div class="a">--soft: HEAD dəyişir, dəyişikliklər staged. --mixed: HEAD dəyişir, dəyişikliklər unstaged. --hard: HEAD dəyişir, dəyişikliklər İTİR.</div>
 
 <div class="q">4. `git rm --cached fayl` nə edir?</div>

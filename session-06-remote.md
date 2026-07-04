@@ -31,6 +31,8 @@ style: |
   .warn { background: #FFF8E1; border-left: 4px solid #F59E0B; padding: 5px 10px; margin: 5px 0; border-radius: 0 6px 6px 0; font-size: 0.76em; color: #78350F; }
   .q { background: #EFF6FF; border-left: 4px solid #3B82F6; padding: 5px 10px; margin: 4px 0; border-radius: 0 6px 6px 0; font-size: 0.78em; font-weight: 600; color: #1E3A5F; }
   .a { background: #F0FAF4; border-left: 4px solid #00A859; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 1px 0 6px 0; font-size: 0.76em; color: #0F172A; }
+  .bonus { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.76em; color: #581C87; font-weight: 600; }
+  .tb { background: #F3E8FF; border-left: 4px solid #9333EA; padding: 4px 10px; border-radius: 0 6px 6px 0; margin: 3px 0; font-size: 0.79em; font-weight: 600; color: #581C87; }
   section::after { color: #848688; font-size: 0.72em; }
 ---
 
@@ -143,6 +145,8 @@ git clone -b feature-login <url>     # konkret branch-ı checkout et
 <!-- Slide 4: git fetch vs git pull -->
 ## `git fetch` vs `git pull` — KRİTİK FƏRQ
 
+<div class="bonus">🎁 BONUS: gündəlik iş üçün sadə `git pull` kifayətdir — bu slide daha çox NƏZARƏT istəyənlər üçündür</div>
+
 ```bash
 # ── git fetch ──────────────────────────────────────────────────
 git fetch origin
@@ -201,6 +205,8 @@ git push origin main           # sonra GÖNDƏR
 git push --force               # MƏCBUR ƏVƏZ EDIR — başqalarının işini silə bilər!
 git push --force-with-lease    # daha TƏHLÜKƏSİZ: yalnız SİZİN gözlədiyin vəziyyət varsa force edir
 ```
+
+<div class="bonus">🎁 BONUS: `--force` — gündəlik işdə lazım olmur, adını tanımaq kifayətdir</div>
 
 <div class="warn">⚠️ `git push --force` shared branch-larda — komanda yoldaşlarının işini SİLƏ BİLƏR. `--force-with-lease` istifadə edin.</div>
 
@@ -317,7 +323,7 @@ git remote set-url origin git@github.com:username/repo.git
 
 <div class="t">T.2 — `git clone` ilə repo-nu BAŞQA bir qovluğa klon edin (simulyasiya: "başqa kompüter"). `git log --oneline` ilə tarixçənin tam kopyalandığını görün.</div>
 
-<div class="t">T.3 — Orijinal qovluqda dəyişiklik edib push edin. Klon qovluğunda `git fetch origin` + `git log origin/main --oneline` + `git merge origin/main` ilə yenilikləri alın.</div>
+<div class="t">T.3 — Orijinal qovluqda dəyişiklik edib push edin. Klon qovluğunda `git fetch origin` + `git log origin/main --oneline` + `git merge origin/main` ilə yenilikləri alın. (Sadə alternativ: birbaşa `git pull origin main`.)</div>
 
 <div class="t">T.4 — SSH açarı yaradın, GitHub-a əlavə edin, `ssh -T git@github.com` ilə test edin.</div>
 
